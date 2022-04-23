@@ -1,0 +1,16 @@
+apply plugin: 'java'
+
+group 'com.stulsoft.java-ui'
+version '1.0.0'
+
+tasks.withType(JavaCompile) {
+        sourceCompatibility = '17'
+        targetCompatibility = '17'
+    }
+	
+	    repositories {
+        mavenCentral()
+    }
+
+dependencies{
+}
