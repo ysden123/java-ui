@@ -16,7 +16,7 @@ public class Test2 {
     }
 
     private void init(){
-        JFrame mainFrame = new JFrame("Test1");
+        JFrame mainFrame = new JFrame("Test 2");
         mainFrame.setSize(400, 400);
 //        mainFrame.setLayout(new GridLayout(2, 2));
         mainFrame.setLayout(new GridLayout(3, 2));

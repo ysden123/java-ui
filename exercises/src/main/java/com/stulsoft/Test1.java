@@ -25,7 +25,7 @@ public class Test1 {
     }
 
     private void init() {
-        mainFrame = new JFrame("Test1");
+        mainFrame = new JFrame("Test 1");
         mainFrame.setSize(400, 400);
         mainFrame.setLayout(new GridLayout(2, 1));
 
