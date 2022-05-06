@@ -1,0 +1,21 @@
+= web-desktop-starter
+
+Example of the start project to create some GUI desktop application with HTML.
+
+The project uses Spring Boot.
+
+== How to build
+Run following command:
+[source, shellscript]
+----
+gradle clean build
+----
+== How to install (deploy)
+Copy _build\libs\web-desktop-starter.jar_ to destination folder.
+
+== How to run
+Run following command:
+[source, shellscript]
+----
+java -jar web-desktop-starter.jar
+----

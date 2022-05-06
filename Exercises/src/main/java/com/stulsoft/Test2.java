@@ -19,20 +19,25 @@ public class Test2 {
         JFrame mainFrame = new JFrame("Test 2");
         mainFrame.setSize(400, 400);
 //        mainFrame.setLayout(new GridLayout(2, 2));
-        mainFrame.setLayout(new GridLayout(3, 2));
+        mainFrame.setLayout(new GridLayout(0, 2));
 
-        JLabel label1 = new JLabel("Label 1", JLabel.CENTER);
-        JLabel label2 = new JLabel("Label 2", JLabel.CENTER);
-        JLabel label3 = new JLabel("Label 3", JLabel.CENTER);
+        JLabel label1 = new JLabel("Left", JLabel.LEFT);
+        JLabel label2 = new JLabel("Right", JLabel.RIGHT);
+        JLabel label3 = new JLabel("Left", JLabel.LEFT);
 
         mainFrame.add(label1);
         mainFrame.add(label2);
         mainFrame.add(label3);
 
-        mainFrame.add(new JLabel("Label 4", JLabel.CENTER));
-        mainFrame.add(new JLabel("Label 5", JLabel.CENTER));
+        mainFrame.add(new JLabel("Center", JLabel.CENTER));
+
+        mainFrame.add(new JLabel("Right", JLabel.RIGHT));
+        mainFrame.add(new JLabel("Left", JLabel.LEFT));
+        
+        mainFrame.add(new JLabel("Center", JLabel.CENTER));
 
         mainFrame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        mainFrame.pack();
         mainFrame.setVisible(true);
     }
 }
