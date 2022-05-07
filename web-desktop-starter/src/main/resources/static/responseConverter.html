@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Response converter</title>
+    <script src="responseConverter.js"></script>
+</head>
+
+<body>
+<div>
+    Original response:
+    <div>
+        <textarea id="originalResponse" rows="10" cols="50" style="overflow:scroll;resize:none;" wrap="off"
+                  onchange="onOriginalResponseChange()" oninput="onOriginalResponseChange()"></textarea>
+        <input type="button" id="convert" value="Convert" onclick="convertResponse()" style="position:relative; bottom:6px;" disabled="disabled"/>
+    </div>
+</div>
+
+<div>
+    Converted file:
+    <div>
+        <input type="text" id="convertedFile" size="53" disabled="disabled"/>
+        <input type="button"id="showResult" onclick="showResult()" value="Show result" disabled="disabled">
+    </div>
+</div>
+</body>
+</html>
