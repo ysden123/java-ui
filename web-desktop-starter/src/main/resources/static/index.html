@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>WEB Desktop Starter with Spring Boot</title>
     <script src="app.js"></script>
 </head>
+
 <body>
-Hey!
-<input type="button" value="testLog" onclick="testLog()">
-<input type="button" value="testHttpRequest" onclick="testHttpRequest()">
-<br/>Response: <input type="text" id="responseText" size="20">
+    <div>
+        Hey!
+        <input type="button" value="testLog" onclick="testLog()">
+        <input type="button" value="testHttpRequest" onclick="testHttpRequest()">
+        <br/>Response: <input type="text" id="responseText" size="20">
+    </div>
+
+    <br>
+    <div>
+        <form action="/formTest" method="post">
+            <input type="text" id="formText" name="formText" size="30"/>
+            <input type="submit" name="Submit">
+        </form>
+    </div>
 </body>
+
 </html>
