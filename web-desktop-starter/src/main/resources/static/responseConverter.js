@@ -6,11 +6,25 @@ function onOriginalResponseChange() {
 }
 
 function convertResponse() {
-    const originalResponse = document.getElementById("originalResponse").value;
+    let originalResponse = document.getElementById("originalResponse").value;
 
     // Here must be call to server
-    document.getElementById("convertedFile").value = "some path to result file";
-    document.getElementById("showResult").disabled = false;
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "/ttt");
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onload = () =>{
+        document.getElementById("convertedFile").value = xhr.responseText;
+        document.getElementById("showResult").disabled = false;
+    }
+// or onerror, onabort
+    xhr.onerror = (error) =>{
+        alert("On error")
+    }
+   let formData = `{
+      "someData": "some data text"
+   }`
+    xhr.send(formData);
 }
 
 function showResult(){
