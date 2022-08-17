@@ -1,0 +1,9 @@
+= StockWatcher
+
+Simple example of GWT client.
+
+See https://www.gwtproject.org/doc/latest/tutorial/index.html[GWT Tutorials].
+
+== Running
+
+ant devmode
