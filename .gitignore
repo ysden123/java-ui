@@ -26,9 +26,10 @@ hs_err_pid*
 */.gradle/
 */target/
 */build/
-GWT/StockWatcher/gwt-unitCache/
 **/.idea/
 **/war/stockwatcher/
+**/war/ysview1/
 **/war/WEB-INF/classes/
 **/war/WEB-INF/deploy/
 **/war/WEB-INF/lib/
+**/gwt-unitCache/
