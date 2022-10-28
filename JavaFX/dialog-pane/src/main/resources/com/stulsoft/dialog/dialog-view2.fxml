@@ -14,5 +14,6 @@
             <TextField fx:id="name" maxWidth="-Infinity" prefHeight="25.0" prefWidth="189.0" promptText="Enter name"/>
         </VBox>
     </content>
-
+    <ButtonType buttonData="APPLY" text="Apply"/>
+    <ButtonType buttonData="CANCEL_CLOSE" text="Cancel"/>
 </DialogPane>

@@ -12,6 +12,7 @@ public class App extends Application {
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add("mainStyle.css");
         primaryStage.setTitle("Hello!");
         primaryStage.setScene(scene);
         primaryStage.show();
