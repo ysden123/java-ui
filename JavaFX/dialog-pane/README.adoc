@@ -1,0 +1,5 @@
+= dialog-pane
+
+Playing with JavaFX: a using of Dialog<R>.
+
+Example demonstrates how to bind an object and dialog window.
