@@ -14,6 +14,7 @@ import javafx.util.Callback;
 import java.util.List;
 
 public class MainController {
+    private boolean dataChanged = false;
     @FXML
     private ListView<Container> list;
 
@@ -24,6 +25,10 @@ public class MainController {
 
     @FXML
     Button deleteButton;
+
+    public boolean isDataChanged() {
+        return dataChanged;
+    }
 
     @FXML
     void initialize() {
@@ -64,6 +69,7 @@ public class MainController {
                 .ifPresent(updatedContainer -> items.add(updatedContainer));
         editButton.setDisable(items.isEmpty());
         deleteButton.setDisable(items.isEmpty());
+        dataChanged = true;
     }
 
     public void onEdtButtonClick(MouseEvent event) {
@@ -77,15 +83,16 @@ public class MainController {
         }
         editButton.setDisable(items.isEmpty());
         deleteButton.setDisable(items.isEmpty());
+        dataChanged = true;
     }
 
-    public void onContainerClick(MouseEvent event){
+    public void onContainerClick(MouseEvent event) {
         if (event.getClickCount() == 2) {
             editContainer(event);
         }
     }
 
-    private void editContainer(Event event){
+    private void editContainer(Event event) {
         int index = list.getSelectionModel().getSelectedIndex();
         if (index >= 0) {
             Container container = items.get(index);
@@ -96,6 +103,7 @@ public class MainController {
             containerEditController
                     .showAndWait()
                     .ifPresent(updatedContainer -> items.set(index, updatedContainer));
+            dataChanged = true;
         }
     }
 
