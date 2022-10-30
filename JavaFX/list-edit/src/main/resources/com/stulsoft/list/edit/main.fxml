@@ -7,11 +7,11 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stulsoft.list.edit.MainController">
    <children>
-      <ListView fx:id="list" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="list" prefHeight="200.0" prefWidth="200.0" onMouseClicked="#onContainerClick" />
       <ButtonBar prefHeight="40.0" prefWidth="200.0">
         <buttons>
           <Button mnemonicParsing="false" onMouseClicked="#onAddButtonClick" text="Add" />
-            <Button fx:id="tButton" layoutX="535.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#onEdtButtonClick" text="Edit" />
+            <Button fx:id="editButton" layoutX="535.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#onEdtButtonClick" text="Edit" />
             <Button fx:id="deleteButton" layoutX="535.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#onDeleteButtonClick" text="Delete" />
         </buttons>
       </ButtonBar>

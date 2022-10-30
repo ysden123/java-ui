@@ -29,7 +29,7 @@ public class ContainerEditController extends Dialog<Container> {
             initModality(Modality.APPLICATION_MODAL);
 
             setResizable(true);
-            setTitle("Edit dialog");
+            setTitle("Container");
             setDialogPane(dialogPane);
 
             setResultConverter(buttonType -> {
