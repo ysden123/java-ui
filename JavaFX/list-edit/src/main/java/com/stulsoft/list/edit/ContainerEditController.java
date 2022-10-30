@@ -41,6 +41,7 @@ public class ContainerEditController extends Dialog<Container> {
             });
 
             fillData();
+            name.requestFocus();
         } catch (Exception exception) {
             exception.printStackTrace();
         }

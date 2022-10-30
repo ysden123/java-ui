@@ -3,6 +3,8 @@ package com.stulsoft.list.edit;
 public class Container {
     private String name;
 
+    public Container(){}
+
     public Container(String name) {
         this.name = name;
     }

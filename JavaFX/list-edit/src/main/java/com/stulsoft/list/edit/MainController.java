@@ -99,4 +99,8 @@ public class MainController {
         }
     }
 
+    public void onSave() {
+        var containerProvider = new ContainerProvider();
+        containerProvider.saveContainers(items);
+    }
 }
