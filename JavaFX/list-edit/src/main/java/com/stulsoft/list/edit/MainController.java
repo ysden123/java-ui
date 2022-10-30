@@ -3,6 +3,7 @@ package com.stulsoft.list.edit;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
@@ -43,22 +44,27 @@ public class MainController {
         list.setItems(this.items);
     }
 
-    public void onAddButtonClick(MouseEvent event) {
+    public void onAddButtonClick() {
         // todo
         items.add(new Container("added item"));
         System.out.printf("data.size()=%d, list.getItems().size()=%d%n", items.size(), list.getItems().size());
     }
 
     public void onEdtButtonClick(MouseEvent event) {
-        // todo
         int index = list.getSelectionModel().getSelectedIndex();
         if (index >= 0) {
             Container container = items.get(index);
-            System.out.printf("Container fo edit: %s%n", container);
+            var node = (Node) event.getSource();
+            var parentScene = node.getScene();
+            ContainerEditController containerEditController =
+                    new ContainerEditController(parentScene.getWindow(), container);
+            containerEditController
+                    .showAndWait()
+                    .ifPresent(updatedContainer -> items.set(index, updatedContainer));
         }
     }
 
-    public void onDeleteButtonClick(MouseEvent event) {
+    public void onDeleteButtonClick() {
         int index = list.getSelectionModel().getSelectedIndex();
         if (index >= 0) {
             items.remove(index);
