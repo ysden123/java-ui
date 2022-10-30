@@ -5,7 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class App  extends Application {
+public class JsonEditorApp extends Application {
     /**
      * The main entry point for all JavaFX applications.
      * The start method is called after the init method has returned,
@@ -23,7 +23,7 @@ public class App  extends Application {
      */
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("editor-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(JsonEditorApp.class.getResource("editor-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         primaryStage.setTitle("JSON Editor");
         primaryStage.setScene(scene);

@@ -1,0 +1,5 @@
+rootProject.name = 'JavaFX'
+include 'dialog-pane'
+include 'hellofx'
+include 'json-editor'
+include 'list-edit'

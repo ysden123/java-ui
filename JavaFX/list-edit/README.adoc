@@ -1,0 +1,3 @@
+= list-edit
+
+Playing with JavaFX: edit a list of objects.

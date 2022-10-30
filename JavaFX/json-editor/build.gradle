@@ -12,7 +12,6 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/com.typesafe/config
     implementation 'com.typesafe:config:1.4.2'
 }
 
@@ -22,7 +21,7 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'com.stulsoft.json.editor'
-    mainClass = 'com.stulsoft.json.editor.App'
+    mainClass = 'com.stulsoft.json.editor.JsonEditorApp'
 }
 
 javafx {

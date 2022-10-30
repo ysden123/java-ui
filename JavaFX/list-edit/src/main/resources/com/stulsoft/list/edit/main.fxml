@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stulsoft.list.edit.MainController">
+   <children>
+      <ListView fx:id="list" onMouseClicked="#onContainerClick" prefHeight="200.0" prefWidth="200.0" />
+      <ButtonBar prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+          <Button mnemonicParsing="false" onMouseClicked="#onAddButtonClick" text="Add" />
+            <Button fx:id="editButton" layoutX="535.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#onEdtButtonClick" text="Edit" />
+            <Button fx:id="deleteButton" layoutX="535.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#onDeleteButtonClick" text="Delete" />
+            <Button mnemonicParsing="false" onMouseClicked="#onSave" text="Save" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</VBox>

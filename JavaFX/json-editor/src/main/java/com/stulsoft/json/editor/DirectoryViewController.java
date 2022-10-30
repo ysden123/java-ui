@@ -23,6 +23,7 @@ public class DirectoryViewController {
 
     @FXML
     void initialize() {
+        System.out.println("==>initialize");
         var directories = new ArrayList<Directory>();
         for (int i = 0; i < 10; ++i) {
             var d = new Directory();
