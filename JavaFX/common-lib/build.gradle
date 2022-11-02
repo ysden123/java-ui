@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'application'
     id 'org.openjfx.javafxplugin' version "${avafxplugin_version}"
 }
 
@@ -13,11 +12,6 @@ repositories {
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
-}
-
-application {
-    mainModule = 'com.stulsoft.dialog'
-    mainClass = 'com.stulsoft.dialog.DialogApp'
 }
 
 javafx {

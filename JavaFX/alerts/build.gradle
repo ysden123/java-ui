@@ -12,10 +12,7 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.json/json
-    implementation 'org.json:json:20220924'
-    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.4.2'
+    implementation project(':common-lib')
 }
 
 tasks.withType(JavaCompile) {
@@ -23,8 +20,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'com.stulsoft.list.edit'
-    mainClass = 'com.stulsoft.list.edit.ListEditApp'
+    mainModule = 'com.stulsoft.alerts'
+    mainClass = 'com.stulsoft.alerts.AlertsApp'
 }
 
 javafx {

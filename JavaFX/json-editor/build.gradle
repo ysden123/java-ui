@@ -1,11 +1,11 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'org.openjfx.javafxplugin' version "${avafxplugin_version}"
 }
 
-group 'com.stulsoft'
-version '1.0-SNAPSHOT'
+group project_group
+version project_version
 
 repositories {
     mavenCentral()
@@ -25,6 +25,6 @@ application {
 }
 
 javafx {
-    version = "19"
+    version = javafx_version
     modules = ['javafx.controls', 'javafx.fxml']
 }
