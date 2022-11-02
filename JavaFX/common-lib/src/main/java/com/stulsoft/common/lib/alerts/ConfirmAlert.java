@@ -1,4 +1,4 @@
-package com.stulsoft.alerts.common;
+package com.stulsoft.common.lib.alerts;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;

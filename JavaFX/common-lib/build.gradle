@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'application'
     id 'org.openjfx.javafxplugin' version '0.0.13'
 }
 
@@ -11,17 +10,8 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    implementation project(':common-lib')
-}
-
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
-}
-
-application {
-    mainModule = 'com.stulsoft.alerts'
-    mainClass = 'com.stulsoft.alerts.AlertsApp'
 }
 
 javafx {

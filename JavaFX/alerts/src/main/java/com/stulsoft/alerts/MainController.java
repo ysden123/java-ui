@@ -1,6 +1,7 @@
 package com.stulsoft.alerts;
 
-import com.stulsoft.alerts.common.ConfirmAlert;
+
+import com.stulsoft.common.lib.alerts.ConfirmAlert;
 
 public class MainController {
     public void onConfirm() {
