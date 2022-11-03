@@ -2,13 +2,21 @@ plugins {
     id 'java'
     id 'application'
     id 'org.openjfx.javafxplugin' version "${javafxplugin_version}"
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
 group project_group
 version project_version
+sourceCompatibility = '17'
 
 repositories {
     mavenCentral()
+}
+
+dependencies {
+    implementation project(':common-lib')
+	implementation 'org.springframework.boot:spring-boot-starter:2.7.5'
 }
 
 tasks.withType(JavaCompile) {
@@ -16,8 +24,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'com.stulsoft.hellofx'
-    mainClass = 'com.stulsoft.hellofx.HelloApplication'
+    mainModule = 'com.stulsoft.spring'
+    mainClass = 'com.stulsoft.spring.SpringApp'
 }
 
 javafx {

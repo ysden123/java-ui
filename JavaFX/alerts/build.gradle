@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.openjfx.javafxplugin' version "${avafxplugin_version}"
+    id 'org.openjfx.javafxplugin' version "${javafxplugin_version}"
 }
 
 group project_group
