@@ -1,0 +1,17 @@
+= spring
+
+A start project. Demonstrates sharing Spring and JavaFX.
+
+== Initialization
+_SpringApp_ is the start Spring class.
+
+_init()_ method initializes Spring binding and starts the Spring framework.
+
+_start_ method loads the main view.
+
+== Dependency injection
+Direct usage of DI in JavaFX controller is very problematic and complicated.
+
+_BinConfiguration_ class demonstrates Spring oriented DI mechanism. This class contains necessary bins that may be used in a JavaFX controllers.
+
+_MainController_ gets a service via _BinConfiguration_.
